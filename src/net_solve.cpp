@@ -576,7 +576,7 @@ void c_network::net_solve( complex_array& cm, nec_complex *cmb,
 				current = (temp + einc[segment_index])* wavelength;
 				add_as_network_loss = true;
 					
-#warning "This loop is messed up. The j is inside another j loop"
+//#warning "This loop is messed up. The j is inside another j loop"
 				// I have removed the j from the "for (int k = 0; k < nteq; k++ )" loop 
 				// and placed this"j=nteq" statement here.
 				j = nteq;

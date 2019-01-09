@@ -107,8 +107,8 @@ int load_line( char *buff, FILE *pfile )
 	} /* end of while( num_chr < max_chr ) */
 	
 	/* Capitalize first two characters (mnemonics) */
-	buff[0] = static_cast<char>(std::toupper(buff[0]));
-	buff[1] = static_cast<char>(std::toupper(buff[1]));
+	buff[0] = static_cast<char>(toupper(buff[0]));
+	buff[1] = static_cast<char>(toupper(buff[1]));
         //if( (buff[0] > 0x60) && (buff[0] < 0x79) )
 	//	buff[0] -= 0x20;
 	//if( (buff[1] > 0x60) && (buff[1] < 0x79) )
