@@ -30,7 +30,7 @@ set( PUBLIC_HEADERS
 		safe_array.h
 		typesafe_stdint.h
 		XGetopt.h
-		../win32/nec2++/config.h
+		config.h
 	)
 
 set( LIB_SOURCES 
@@ -49,6 +49,7 @@ set( LIB_SOURCES
 		c_plot_card.h
 		catch.hpp
 		common.h
+		config.h
 		CurrentInput.h
 		electromag.cpp
 		electromag.h
