@@ -66,5 +66,5 @@ html/*
 xml/*
 latex/*
 
-config.h
+src/config.h
 build/
