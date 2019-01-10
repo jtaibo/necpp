@@ -123,7 +123,7 @@ public:
 
         delete[] _data;
         _data = new_data_;
-      } catch (std::bad_alloc& ba) {
+      } catch (std::bad_alloc& /*ba*/) {
         throw new nec_exception("Error: Out of Memory ");
       }
     }

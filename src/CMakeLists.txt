@@ -2,6 +2,37 @@
 set( NECLIB necpp )
 set( NECEXEC nec2cpp )
 
+set( PUBLIC_HEADERS 
+		AntennaInput.h
+		BaseInput.h
+		c_evlcom.h
+		c_geometry.h
+		c_ggrid.h
+		c_plot_card.h
+		common.h
+		CurrentInput.h
+		electromag.h
+		libnecpp.h
+		math_util.h
+		matrix_algebra.h
+		misc.h
+		nec_context.h
+		nec_debug.h
+		nec_exception.h
+		nec_ground.h
+		nec_output.h
+		nec_radiation_pattern.h
+		nec_results.h
+		nec_structure_currents.h
+		nec_wire.h
+		PowerBudget.h
+		RadiationInput.h
+		safe_array.h
+		typesafe_stdint.h
+		XGetopt.h
+		../win32/nec2++/config.h
+	)
+
 set( LIB_SOURCES 
 		AntennaInput.h
 #		atlas_check.cpp
@@ -74,3 +105,11 @@ add_executable (${NECEXEC} ${EXEC_SOURCES})
 # public include directories we will use those link directories when building
 # necpp executable
 target_link_libraries (${NECEXEC} LINK_PUBLIC ${NECLIB})
+
+install ( TARGETS ${NECEXEC} ${NECLIB}
+		  RUNTIME DESTINATION bin
+		  LIBRARY DESTINATION lib
+		  ARCHIVE DESTINATION lib )
+
+install( FILES ${PUBLIC_HEADERS} 
+         DESTINATION include/nec2pp )
